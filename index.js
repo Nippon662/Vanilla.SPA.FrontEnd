@@ -131,6 +131,8 @@ function changeTitle(title = '') {
 function search() {
     var query = stripTags($("input[name='q']").val()); // jQuery: obtém e filtra o termo a ser buscado.
     console.log(query); // Debug: exibe no console. Será substituído pelo processamento do programa.
+    sessionStorage.search = query;
+    loadPage("search");
     return false; // Sai do programa sem fazer mais nada.
 }
 
